@@ -17,10 +17,11 @@ return new class extends Migration {
       $table->string('title', 100);
       $table->text('description');
       $table->text('thumb');
-      $table->float('price', 5, 2);
-      $table->string('series', 100);
+      $table->string('price');
+      $table->string('series', 50);
       $table->date('sale_date');
       $table->enum('type', ['comic book', 'graphic novel']);
+      // $table->string('type', 50);
       // $table->json('artists');
       // $table->json('writers');
       $table->timestamps();
