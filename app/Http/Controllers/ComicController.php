@@ -25,7 +25,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view("comics.create");
     }
 
     /**
@@ -42,8 +42,8 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * * @param  int  $id
+     * * @return \Illuminate\Http\Response
      */
     public function show(Comic $comic)
     {

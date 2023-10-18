@@ -9,6 +9,7 @@
 
     {{-- CSS IMPORTATO DA YELD --}}
     @yield('css')
+
     <!-- Styles -->
     @vite('resources/js/app.js')
 </head>

@@ -9,12 +9,7 @@
 @section('main-content')
     <section class="container mt-5">
         <div class="row">
-            <div class="card p-0">
-                <div class="card-header">
-                    <h3>Lista Comics</h3>
-                </div>
-                @include('partials._listComics')
-            </div>
+            @include('partials._card')
         </div>
     </section>
 @endsection
