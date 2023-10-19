@@ -25,19 +25,23 @@
                 <td scope="col">
                     <div class="d-flex align-items-center">
                         <div>
-                            <a href="{{ route('comics.edit', $comic) }}" class="mx-1">
-                                <i class="fa-solid fa-pencil"></i>
+                            <a href="{{ route('comics.edit', $comic) }}" class="btn mx-1">
+                                <i class="fa-solid fa-pencil" style="color: #1f2e51;"></i>
                             </a>
                         </div>
                         <div>
-                            <a href="{{ route('comics.show', $comic) }}" class="mx-1">
-                                <i class="fa-solid fa-eye"></i>
+                            <a href="{{ route('comics.show', $comic) }}" class="btn mx-1">
+                                <i class="fa-solid fa-eye" style="color: #4d94e7;"></i>
                             </a>
                         </div>
                         <div>
-                            <a href="{{ route('comics.show', $comic) }}" class="mx-1">
-                                <i class="fa-solid fa-trash-arrow-up" style="color: #d00606;"></i>
-                            </a>
+                            <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn mx-1">
+                                    <i class="fa-solid fa-trash-arrow-up" style="color: #d00606!important;"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </td>
