@@ -12,9 +12,10 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header text-center">
-                        <h3>Insetisci il tuo manga</h3>
+                        <h3>Inserisci il tuo manga</h3>
                     </div>
-                    <form class="card-body">
+                    <form action="{{ route('comics.store') }}" method="POST" class="card-body">
+                        @csrf
                         <div class="mb-3">
                             <label for="title" class="form-label">Titolo</label>
                             <input type="text" class="form-control" id="title" name="title">
@@ -33,19 +34,21 @@
                         </div>
                         <div class="mb-3 col-auto">
                             <label for="series" class="form-label">Serie</label>
-                            <input type="number" class="form-control" id="series" name="series">
+                            <input type="text" class="form-control" id="series" name="series">
                         </div>
                         <div class="mb-3">
                             <label for="sale_date" class="form-label">Data di uscita</label>
                             <input type="date" class="form-control" id="sale_date" name="sale_date">
                         </div>
-                        <select name="type" class="form-select mb-3" aria-label="Default select example">
+                        <select id="type" name="type" class="form-select mb-3" aria-label="Default select example">
                             <option selected>Seleziona...</option>
                             <option value="graphic novel">graphic novel</option>
                             <option value="comic book">comic book</option>
                         </select>
-                        <a href="#" class="btn btn-success px-5">INVIA</a>
-                        {{-- <a href="{{ Route(comics . show) }}" class="btn btn-success px-5">INVIA</a> --}}
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success px-5">INVIA</button>
+                            {{-- <a href="{{ Route(comics . show) }}" class="btn btn-success px-5">INVIA</a> --}}
+                        </div>
                     </form>
                 </div>
             </div>

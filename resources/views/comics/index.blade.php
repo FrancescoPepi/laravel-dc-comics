@@ -9,6 +9,9 @@
 @section('main-content')
     <section class="container mt-5">
         <div class="row">
+            <div class="div mb-3">
+                <a href="{{ route('comics.create') }}" class="btn btn-primary">CREATE</a>
+            </div>
             <div class="card p-0">
                 <div class="card-header">
                     <h3>Lista Comics</h3>

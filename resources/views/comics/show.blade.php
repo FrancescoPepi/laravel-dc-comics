@@ -9,6 +9,9 @@
 @section('main-content')
     <section class="container mt-5">
         <div class="row">
+            <div class="div mb-3">
+                <a href="{{ route('comics.index') }}" class="btn btn-primary">GO BACK</a>
+            </div>
             @include('partials._card')
         </div>
     </section>

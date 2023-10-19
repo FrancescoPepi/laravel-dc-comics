@@ -16,7 +16,7 @@
             <tr>
                 <th scope="row">{{ $comic->id }}</th>
                 <td scope="col">{{ $comic->title }}</td>
-                <td scope="col">{{ $comic->price }}</td>
+                <td scope="col">$ {{ $comic->price }}</td>
                 <td scope="col">{{ $comic->series }}</td>
                 <td scope="col">{{ $comic->type }}</td>
                 <td scope="col">{{ $comic->created_at }}</td>

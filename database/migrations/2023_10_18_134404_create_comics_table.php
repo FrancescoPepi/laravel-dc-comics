@@ -17,7 +17,7 @@ return new class extends Migration {
       $table->string('title', 100);
       $table->text('description');
       $table->text('thumb');
-      $table->string('price');
+      $table->float('price', 5, 2)->default(0);
       $table->string('series', 50);
       $table->date('sale_date');
       $table->enum('type', ['comic book', 'graphic novel']);
