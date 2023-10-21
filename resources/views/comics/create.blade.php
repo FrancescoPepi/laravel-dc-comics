@@ -22,26 +22,46 @@
                         <div class="d-flex">
                             <div class="mb-3  me-2 col">
                                 <label for="title" class="form-label">Titolo</label>
-                                <input type="text" class="form-control" id="title" name="title">
+                                <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                    value="{{ old('title') }}" id="title" name="title">
+                                @error('title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="mb-3 col">
                                 <label for="price" class="form-label">Prezzo</label>
-                                <input type="number" class="form-control" id="price" name="price">
+                                <input type="text" class="form-control @error('price') is-invalid @enderror"
+                                    value="{{ old('price') }}" id="price" name="price">
+                                @error('price')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                         <div class="mb-3 col-12">
                             <label for="thumb" class="form-label">thumb</label>
-                            <input type="url" class="form-control" id="thumb" name="thumb">
+                            <input type="url" class="form-control @error('thumb') is-invalid @enderror"
+                                value="{{ old('thumb') }}" id="thumb" name="thumb">
+                            @error('thumb')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="d-flex">
                             <div class="mb-3 me-2 col">
                                 <label for="series" class="form-label">Serie</label>
-                                <input type="text" class="form-control" id="series" name="series">
+                                <input type="text" class="form-control @error('series') is-invalid @enderror"
+                                    value="{{ old('series') }}" id="series" name="series">
+                                @error('series')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mb-3 me-2 col">
                                 <label for="sale_date" class="form-label">Data di uscita</label>
-                                <input type="date" class="form-control" id="sale_date" name="sale_date">
+                                <input type="date" class="form-control @error('sale_date') is-invalid @enderror"
+                                    value="{{ old('sale_date') }}" id="sale_date" name="sale_date">
+                                @error('sale_date')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <select id="type" name="type" class="form-select mb-3  col" style="align-self: end"
                                 aria-label="Default select example">
@@ -52,7 +72,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Descrizione</label>
-                            <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+                            <textarea class="form-control" id="description @error('description') is-invalid @enderror"
+                                value="{{ old('description') }}" rows="3" name="description"></textarea>
+                            @error('description')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-success px-5">INVIA</button>
