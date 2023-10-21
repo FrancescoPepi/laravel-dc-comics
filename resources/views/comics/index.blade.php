@@ -9,17 +9,16 @@
 @section('main-content')
     <section class="container mt-5">
         <div class="row">
-            <div class="div mb-3 p-0">
+            <section class="mb-3 p-0">
                 <a href="{{ route('comics.create') }}" class="btn btn-primary">CREATE</a>
-            </div>
+            </section>
             <div class="card p-0">
                 <div class="card-header">
                     <h3>Lista Comics</h3>
                 </div>
                 @include('partials._listComics')
-                <div class="card-footer">
-
-                </div>
+                <div class="card-footer"></div>
             </div>
+        </div>
     </section>
 @endsection

@@ -15,9 +15,12 @@
 </head>
 
 <body>
-    @include('partials._navbar')
+    <nav>
+        @include('partials._navbar')
+    </nav>
 
     <main>
+        @yield('button-navigation')
         @yield('main-content')
     </main>
 

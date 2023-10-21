@@ -9,7 +9,7 @@
 @section('main-content')
     <section class="container mt-5">
         <div class="row">
-            <div class="div mb-3">
+            <div class="mb-3">
                 <a href="{{ route('comics.index') }}" class="btn btn-primary">GO BACK</a>
             </div>
             <div class="col">
@@ -35,11 +35,11 @@
                             <input type="url" class="form-control" id="thumb" name="thumb">
                         </div>
                         <div class="d-flex">
-                            <div class="mb-3   me-2 col">
+                            <div class="mb-3 me-2 col">
                                 <label for="series" class="form-label">Serie</label>
                                 <input type="text" class="form-control" id="series" name="series">
                             </div>
-                            <div class="mb-3   me-2 col">
+                            <div class="mb-3 me-2 col">
                                 <label for="sale_date" class="form-label">Data di uscita</label>
                                 <input type="date" class="form-control" id="sale_date" name="sale_date">
                             </div>
